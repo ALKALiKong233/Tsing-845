@@ -3994,6 +3994,11 @@ void cpufreq_remove_update_util_hook(int cpu);
 bool cpufreq_this_cpu_can_update(struct cpufreq_policy *policy);
 #endif /* CONFIG_CPU_FREQ */
 
+#ifdef CONFIG_DYNAMIC_STUNE_BOOST
+int do_stune_boost(char *st_name, int boost);
+int reset_stune_boost(char *st_name);
+#endif /* CONFIG_DYNAMIC_STUNE_BOOST */
+
 extern DEFINE_PER_CPU_READ_MOSTLY(int, sched_load_boost);
 
 #ifndef arch_scale_cpu_capacity
