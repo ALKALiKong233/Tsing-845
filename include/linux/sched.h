@@ -3997,6 +3997,7 @@ bool cpufreq_this_cpu_can_update(struct cpufreq_policy *policy);
 #ifdef CONFIG_DYNAMIC_STUNE_BOOST
 int do_stune_boost(char *st_name, int boost);
 int reset_stune_boost(char *st_name);
+int stune_boost(char *st_name);
 #endif /* CONFIG_DYNAMIC_STUNE_BOOST */
 
 extern DEFINE_PER_CPU_READ_MOSTLY(int, sched_load_boost);
