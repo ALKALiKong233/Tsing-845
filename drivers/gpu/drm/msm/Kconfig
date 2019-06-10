@@ -161,3 +161,9 @@ config KLAPSE
     help
         A simple rgb dynamic lapsing module similar to LineageOS' livedisplay
 
+config DRM_SYNC_DEBUG
+	bool "DRM debug synchronization"
+	depends on DRM_MSM
+	default n
+	help
+	  This makes MSM DRM drivers keep track of fence names.
